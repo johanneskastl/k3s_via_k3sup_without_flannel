@@ -6,6 +6,8 @@ This is based on what is in the [k3s up and running](https://community.suse.com/
 
 This setup creates three k3s server VMs and one VM as k3s agent (aka worker) and prepares a k3sup installation script via Ansible. This script will install k3s WITHOUT `flannel`, so you can install another CNI manually.
 
+Ansible mounts the eBPF filesystem, in case you want to use Cilium (if not it does not harm to have it mounted).
+
 Default OS is openSUSE Leap 15.2, but that can be changed in the Vagrantfile. Same holds true for the sizing of the machines.
 
 ## Vagrant
