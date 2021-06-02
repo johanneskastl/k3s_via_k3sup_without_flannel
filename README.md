@@ -27,6 +27,8 @@ You can install any CNI.
 
 For Cilium, find the k3s-specific instructions [here](https://docs.cilium.io/en/v1.9/gettingstarted/k3s/).
 
+For Calico, check the documentation on [K3s multi-node install](https://docs.projectcalico.org/getting-started/kubernetes/k3s/multi-node-install).
+
 ## Cleaning up
 
 When tearing down the the vagrant VMs using `vagrant destroy`, the files created by Ansible are not being removed.
