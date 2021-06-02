@@ -21,6 +21,12 @@ Default OS is openSUSE Leap 15.2, but that can be changed in the Vagrantfile. Sa
 7. Install another CNI
 8. Party!
 
+## Installing a CNI
+
+You can install any CNI.
+
+For Cilium, find the k3s-specific instructions [here](https://docs.cilium.io/en/v1.9/gettingstarted/k3s/).
+
 ## Cleaning up
 
 When tearing down the the vagrant VMs using `vagrant destroy`, the files created by Ansible are not being removed.
