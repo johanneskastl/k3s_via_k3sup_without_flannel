@@ -35,3 +35,18 @@
         user: "{{ ansible_user }}"
         state: 'present'
         key: "{{ lookup('file', '../ssh_key_k3s_via_k3sup_without_flannel.pub') }}"
+
+- name: 'Mount eBPF on all nodes (in case Cilium is to be used as CNI)'
+  hosts: 'all'
+  gather_facts: 'yes'
+  become: 'true'
+
+  tasks:
+
+    - name: 'Mount eBPF'
+      mount:
+        path: '/sys/fs/bpf'
+        src: 'bpffs'
+        fstype: 'bpf'
+        opts: 'defaults'
+        state: 'present'
